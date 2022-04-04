@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4DB" pageWidth="680" pageHeight="600" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c09da529-8ec9-42d6-ab8e-e6d606f05f5c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="OraclPath"/>
+	<parameter name="startdate" class="java.lang.String"/>
+	<parameter name="enddate" class="java.lang.String"/>
+	<parameter name="exercisecode" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from toce_exercise_test_lat]]>
+	</queryString>
+	<field name="sno" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SNO"/>
+		<property name="com.jaspersoft.studio.field.label" value="SNO"/>
+	</field>
+	<field name="groupType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="GROUPTYPE"/>
+		<property name="com.jaspersoft.studio.field.label" value="GROUPTYPE"/>
+	</field>
+	<field name="transType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TRANSTYPE"/>
+		<property name="com.jaspersoft.studio.field.label" value="TRANSTYPE"/>
+	</field>
+	<field name="debitsa" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="DEBITSA"/>
+		<property name="com.jaspersoft.studio.field.label" value="DEBITSA"/>
+	</field>
+	<field name="debitca" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="DEBITCA"/>
+		<property name="com.jaspersoft.studio.field.label" value="DEBITCA"/>
+	</field>
+	<field name="debitamt" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="DEBITAMT"/>
+		<property name="com.jaspersoft.studio.field.label" value="DEBITAMT"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="660" height="90" uuid="57f80b95-2c82-4855-8b4f-797057ea6a99"/>
+				<staticText>
+					<reportElement x="0" y="10" width="130" height="20" uuid="914dcaf5-f726-4779-8a3a-a7e94bcfe85b">
+						<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[REPORT-ID: OCOE001B]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="10" width="170" height="20" uuid="d4da6794-c210-46a4-8c8a-5887d3e3f91f"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[UNITED OVERSEAS BANK GROUP]]></text>
+				</staticText>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement x="580" y="10" width="64" height="20" uuid="a4a7cdda-0a83-4ef9-8a87-db56c92e916b"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<textField pattern="HH:mm:ss">
+					<reportElement x="580" y="30" width="64" height="20" uuid="2f4f1cba-6de3-4568-acaf-beadc154e3cb"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="50" width="380" height="20" uuid="cc752a34-e0cd-4c86-8f83-a967a00c6045">
+						<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[OPEN COE BIDDING PERIOD]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="147" y="50" width="62" height="20" uuid="0cb19daf-d121-4ec7-9953-92871725b69f"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{startdate}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="227" y="50" width="66" height="20" uuid="17f02bb7-c6ac-47a8-accb-b71744ae2245"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{enddate}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="290" y="50" width="98" height="20" uuid="774a083d-6384-4976-9871-17e32513c279">
+						<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[ (EXERCISE CODE:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="390" y="50" width="112" height="20" uuid="f28657f7-89ad-4383-bf8d-50401b29b0cf"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{exercisecode}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="70" width="310" height="20" uuid="528479c5-84fd-4414-aa3b-363524661348">
+						<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[OCOE DAILY TRANSACTION REPORT(DAILY) FOR PROCESSING DATE ]]></text>
+				</staticText>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement x="320" y="70" width="72" height="20" uuid="37ea2390-aa63-4178-acd9-055d7c2ea2d4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="500" y="30" width="80" height="20" uuid="5911e463-af17-4857-b29a-190b8e98c7f8">
+						<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[REPORT TIME: ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="500" y="10" width="90" height="20" uuid="b9356d3c-51e9-447e-84df-b181867e737a">
+						<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[REPORT DATE: ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="210" y="50" width="17" height="20" uuid="95400668-2935-456e-acd4-716ba63b8c92">
+						<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[TO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="500" y="70" width="34" height="20" uuid="40d0dc99-039f-43cc-9979-86842839a165">
+						<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[PAGE:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="534" y="70" width="36" height="20" uuid="9d45e82d-c3f9-4d5f-96fd-5a2e32f2c37e"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="660" height="40" uuid="58f80b95-2c82-4855-8b4f-797057ea6a99"/>
+				<staticText>
+					<reportElement x="215" y="10" width="220" height="20" uuid="d4da6794-c210-46a4-8c8a-5887d3e3f91f"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[   * * *    R E P O R T      S U M M A R Y  * * *]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="27">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="30" height="20" uuid="d1a38148-de20-425d-b25d-85a3556d32fb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f64aed42-af9a-4657-b638-fcd113824785"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[S.NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="130" y="0" width="84" height="20" uuid="a3bfc9b8-164c-4e71-ab01-525e60f86100">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89481866-baf6-491e-91a6-10968d6735a3"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TRAN-TYPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="210" y="0" width="150" height="20" uuid="32280bb2-3472-4a7f-9927-90d7d7014f47">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="479295ff-2543-422c-87b7-13e0615c0f96"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL DEBIT AMT(SA)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="490" y="0" width="126" height="20" uuid="1d2aa217-6dbc-45f8-aa86-0d5d599301f8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2bc37aa-6eac-40ca-a562-1ec154a6fc23"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL DEBIT AMT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="360" y="-1" width="128" height="20" uuid="3815ddb8-87c8-4a22-a19e-f14f16cfeb8d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3bc37aa-6eac-40ca-a562-1ec154a6fc23"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL DEBIT AMT(CA)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="29" height="1" uuid="04a9c4d5-af68-4738-b280-249876a779f3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="40" y="21" width="79" height="1" uuid="97853526-a559-4d82-86b0-3ff2062d733c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="40" y="0" width="80" height="20" uuid="5b50b5af-488e-4d4a-8818-b27b8050178e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4b841b3e-9015-494e-85c2-0fdcd0d7ebe6"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GROUP TYPE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="139" y="21" width="69" height="1" uuid="a42f6d24-7742-4bbd-8139-f3e50b00979c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="227" y="20" width="121" height="1" uuid="39b7a79e-87af-4c3d-b92e-b43b9f75b650">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="360" y="19" width="127" height="1" uuid="4179c06f-1520-4ec7-a863-4e7d612f251d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="500" y="19" width="111" height="1" uuid="d6d50afd-b033-437b-8c6c-84f255eb42b1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="0" width="28" height="20" uuid="8a67eee1-5865-4885-bab9-157c4e5e4edc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f64aed42-af9a-4657-b638-fcd113824785"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sno}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="40" y="0" width="80" height="20" uuid="e56ab427-2bff-4be2-9287-e74670128c41">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4b841b3e-9015-494e-85c2-0fdcd0d7ebe6"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{groupType}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="134" y="0" width="80" height="20" uuid="303f2015-dfdc-4beb-b8ec-6c5c43798de0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89481866-baf6-491e-91a6-10968d6735a3"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{transType}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="237" y="0" width="111" height="20" uuid="771cc5d8-b0d9-447f-9143-80ed434240c9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="479295ff-2543-422c-87b7-13e0615c0f96"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{debitsa}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="368" y="0" width="111" height="20" uuid="514b0719-3b2d-4428-922b-16ea273c0bdd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2bc37aa-6eac-40ca-a562-1ec154a6fc23"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{debitca}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="505" y="0" width="111" height="20" uuid="532a9b3d-88d1-4798-a524-49092e73892f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3bc37aa-6eac-40ca-a562-1ec154a6fc23"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{debitamt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="50" splitType="Stretch">
+			<line>
+				<reportElement x="260" y="10" width="69" height="1" uuid="78a60afe-525d-4be0-9440-30d4179b251a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="260" y="40" width="69" height="1" uuid="78999505-bc34-4b3a-87ee-ab6b280bb02c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="390" y="10" width="69" height="1" uuid="7d47e72e-c7dc-47fc-a19b-e5f3393f5d17">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="518" y="10" width="69" height="1" uuid="2b9d1497-6771-4211-a338-8842c2ef30b8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="392" y="40" width="69" height="1" uuid="962e312d-7af4-4d4e-ac40-7cdf48bd63b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="521" y="40" width="69" height="1" uuid="b1d6002a-13a9-48a6-a663-b9875c8c83ce">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="260" y="20" width="84" height="20" uuid="07fba6ee-5cee-4c28-be23-6909b0e6d0ea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89481866-baf6-491e-91a6-10968d6735a3"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[80]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="384" y="20" width="84" height="20" uuid="b70f789a-7068-462a-acde-36b0c6dfa6b5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89481866-baf6-491e-91a6-10968d6735a3"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[80]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="520" y="20" width="84" height="20" uuid="e337e99c-a2dc-4073-9d3a-54cddad41e51">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89481866-baf6-491e-91a6-10968d6735a3"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[80]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="660" height="40" uuid="6a6625a9-4bcb-40b9-9505-17918bc8316b"/>
+				<staticText>
+					<reportElement x="147" y="10" width="468" height="20" uuid="29129b91-3229-4bd2-aa18-23e81bb3a8af"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[   * * *    R E MARK   THERE ARE NO PREVILAGED MOTOR TREADED TRANSACTION S TODAY   * * ]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,40 @@
+                                                                                                              
+                                                                                                              
+   REPORT-ID: OCOE001B                     UNITED OVERSEAS BANK GROUP               REPORT DATE: 05/04/2022   
+                                                                                    REPORT TIME: 01:07:41     
+                                                                                                              
+   OPEN COE BIDDING PERIOD 02/02/2022TO 03/03/2022 (EXERCISE CODE:02-02-2022-2-3)                             
+   OCOE DAILY TRANSACTION REPORT(DAILY) FOR            05/04/2022                   PAGE: 1                   
+                                                                                                              
+                                         * * *    R E P O R T      S U M M                                    
+                                                                                                              
+   S.NO    GROUP TYPE     TRAN-TYPE    TOTAL DEBIT AMT(SA)    TOTAL DEBIT AMT(CA)    TOTAL DEBIT AMT          
+                                                                                                              
+     1     individual     submission              80                   80                    80               
+     2     individual       Revison             80.00                80.00                   80               
+     3     individual     Fee Charge              80                   80                    80               
+                                                                                                              
+     4    Co-orpoarate      Revison               80                   80                    80               
+     5    Co-orpoarate    Fee Charge              80                   80                    80               
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                                                                              
+                                                   80                  80                    80               
+                                                                                                              
+                                                                                                              
+                               * * *    R E MARK   THERE ARE NO PREVILAGED MOTOR TREADED TRANSACTION S        
+                                                                                                              
+                                                                                                              
+                                                                                                              
